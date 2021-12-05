@@ -1,0 +1,42 @@
+body{
+   background-color: rgb(24, 24, 31);
+}
+*{
+    box-sizing: border-box;
+}
+.earth{
+    width: 200px;
+    height: 200px;
+    clip-path: circle(40% at 50% 50%);
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    animation: 10s moon 2 linear;
+}
+.orbit{
+    width: 350px;
+    height: 350px;
+    border-radius: 60%;
+    border: 1px solid rgb(24, 24, 31);
+    position: absolute;
+    top: calc(50% - 165px);
+    left: calc(50% - 165px);
+}
+.moon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 265px);
+    transform-origin: 265px 100px;
+    clip-path: circle(40% at 50% 50%);
+    animation: 10s moon 2 linear;
+}
+@keyframes moon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
